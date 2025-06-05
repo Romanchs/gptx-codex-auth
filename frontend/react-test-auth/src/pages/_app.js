@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "../../public/eusign/css/common.css";
 import { Provider } from "react-redux";
 import { store } from "@/store";
 

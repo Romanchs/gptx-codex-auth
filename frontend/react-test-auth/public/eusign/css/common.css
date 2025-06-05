@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.radio-button {
+    margin-top: 0.5rem;
+}
+
+.select-field {
+    margin-top: 0.5rem;
+}
+
+.select-field select {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.input-field input {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+form input[type="submit"], input[type="button"] {
+    background: linear-gradient(to right, rgba(3, 35, 74, 1), rgba(3, 67, 129, 1)) no-repeat;
+    color: white;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    border: none;
+    opacity: 85%;
+    width: 8rem;
+}
+
+form input[type="submit"]:hover, input[type="button"]:hover {
+    opacity: 100%;
+}
+
+.navForm {
+	min-width:10rem;	
+}
+
+.loginForm {
+	min-width:25rem;	
+}
+
+.mainForm {
+	min-width:50rem;
+}
+
+.navMenu {
+	margin-top:4rem;
+	text-align: center;
+}
+
+.navMenu input[type="submit"], .navMenu input[type="button"] {
+    margin-top: 0.0rem;
+    margin-bottom: 0.2rem;
+}
+
+.dimmer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(3, 35, 74, 0.8);
+	z-index:999;
+}
+
+.dimmer-content {
+	color: white;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
