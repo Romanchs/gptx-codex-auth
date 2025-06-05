@@ -1,0 +1,1 @@
+java -classpath json-simple-1.1.1.jar:EUSignJava.jar:EUSignWebServer.jar com.iit.certificateAuthority.endUser.libraries.signJava.WebServer.Main 8089 ./public
