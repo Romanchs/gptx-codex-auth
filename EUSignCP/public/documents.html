@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JSC IIT Test Page (NPM with Java - 2FA, Sign And Tax Reports)</title>
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Include script for "IIT End User Sign (JavaScript)" library -->
+    <script src='js/euscp.js'></script>
+
+    <!-- Include script with crypto logic implementation -->
+    <script src='js/crypto.js'></script>
+
+    <!-- Include script for page -->
+    <script src='js/documents.js'></script>
+</head>
+<body>
+	 <form class="navForm" action="/logout" method="post">
+		<div class="navMenu">
+			<div>
+				<input type="button" value="Home" onclick="window.location.href='/login'">
+			</div>
+		 	<div>
+				<input type="button" value="Sign" onclick="window.location.href='documents.html'">
+			</div>
+			
+		 	<div>
+				<input type="button" value="Tax Reports" onclick="window.location.href='taxreports.html'">
+			</div>
+			
+			<div>
+				<input type="submit" value="Logout">
+			</div>
+		</div>
+	</form>
+
+	 <form class="mainForm">
+	 	<h2 style="text-align: center;">Sign Documents </h2>
+	 	
+	 	<div class="dimmer" id="dimmer" style="display: none">
+			<div class="dimmer-content">
+				<label id="dimmerText">Loading...</label>
+				<div id="dimmerContent"></div>
+			</div>
+		</div>	
+	 	
+		<div id="pkBlock">
+			<div id="pkSelectBlock">
+				<div id="pkTypeBlock">
+		            <p>Select private key media type</p>
+		            <hr>
+		            <div class="radio-button">
+		                <input type="radio" id="pkTypeFile" name="pkType" checked>
+		                <label for="pkTypeFile">File</label>
+		            </div>
+		            <div class="radio-button">
+		                <input type="radio" id="pkTypeKeyMedia" name="pkType">
+		                <label for="pkTypeKeyMedia">Token</label>
+		            </div>
+		            <div class="radio-button">
+		                <input type="radio" id="pkTypeKSP" name="pkType">
+		                <label for="pkTypeKSP">Cloud</label>
+		            </div>
+		
+		            <hr>
+		        </div>
+		        
+		        <div id="pkCABlock">
+		            <label>CA:</label>
+		            <div class="select-field">
+		                <select id="pkCASelect"></select>
+		            </div>
+		            <br>
+		        </div>
+		
+		        <div id="pkFileBlock">
+		            <label>Private key file:</label><br><br>
+		            <input id="pkFile" type="file" style="display: none;"></input>
+		            <div>
+		                <input type="button" value="Select" style="margin:0px;" onclick="document.getElementById('pkFile').click();">
+		                <label id="pkFileName" style="padding-left:0.1rem;"></label>
+		            </div>
+		            <div class="select-field">
+		                <select id="pkFileAliasSelect" style="display: none;"></select>
+		            </div>	
+		            <div class="input-field">
+		                <input type="password" id="pkFilePassword" placeholder="Private key password"></input>
+		            </div>
+		        </div>
+		            
+		        <div id="pkKeyMediaBlock" style="display:none">
+		            <label>Token:</label>
+		            <div class="select-field">
+		                <select id="pkKeyMediaSelect"></select>
+		            </div>
+		            <div class="input-field">
+		                <input type="password" id="pkKeyMediaPassword" placeholder="Private key password"></input>
+		            </div>
+		        </div>
+		
+		        <div id="pkKSPBlock" style="display:none">
+		            <label>Cloud provider:</label>
+		            <div class="select-field">
+		                <select id="pkKSPSelect"></select>
+		            </div>
+		            <div id="pkKSPUserIdBlock" class="input-field">
+		                <input id="pkKSPUserId" placeholder="Client ID"></input>
+		            </div>
+		        </div>
+	        </div>
+	        
+	       	<div id="pkInfoBlock" style="display:none">
+				<label>Key info:</label>
+				<hr>
+				<div id="pkInfoContentBlock"></div>
+			</div> 
+	        
+	   		<div style="text-align: right;">
+				<input id="readPKButton" type="button" value="Read">
+			</div>
+		</div>
+	 
+		<div>
+			<div id="documentsToSignBlock" style="display:none">
+				<label>Document to sign:</label>
+				<hr>		
+				<div id="documentsToSignContentBlock"></div>
+			</div>	
+					
+			<div id="documentsWithSignBlock" style="display:none">
+				<label>Document with sign:</label>
+				<hr>		
+				<div id="documentsWithSignContentBlock"></div>
+			</div>
+			
+			<div style="text-align: right;">
+				<input id="signButton" type="button" value="Sign">
+			</div>
+		</div>
+	</form>
+</body>
+</html>

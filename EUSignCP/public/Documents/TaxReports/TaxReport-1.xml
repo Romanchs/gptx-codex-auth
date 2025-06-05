@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ZVIT>
+ <TRANSPORT>
+ <CREATEDATE>30.04.2024 10:00:00</CREATEDATE>
+ <VERSION>4.1</VERSION>
+ </TRANSPORT>
+ <ORG>
+ <FIELDS>
+ <EDRPOU>11111111</EDRPOU>
+ </FIELDS>
+ <CARD>Information</CARD>
+ </ORG>
+</ZVIT>

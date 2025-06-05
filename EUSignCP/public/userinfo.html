@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JSC IIT Test Page (NPM with Java - 2FA, Sign And Tax Reports)</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	 <form class="navForm" action="/logout" method="post">
+		<div class="navMenu">
+			<div>
+				<input type="button" value="Home" onclick="window.location.href='/login'">
+			</div>
+		 	<div>
+				<input type="button" value="Sign" onclick="window.location.href='documents.html'">
+			</div>
+			
+		 	<div>
+				<input type="button" value="Tax Reports" onclick="window.location.href='taxreports.html'">
+			</div>
+			
+			<div>
+				<input type="submit" value="Logout">
+			</div>
+		</div>
+	</form>
+	
+	<form class="mainForm">
+	 	<h2 style="text-align: center;">User info</h2>
+	 
+		<div id="userInfoBlock">
+			<label>User info:</label>
+			<hr>		
+			<!--% user_info %-->
+			<br>
+			<br>
+		</div>
+	</form>
+</body>
+</html>
