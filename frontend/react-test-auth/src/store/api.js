@@ -7,7 +7,14 @@ export const api = createApi({
     hello: builder.query({
       query: () => 'hello',
     }),
+    login: builder.mutation({
+      query: (body) => ({
+        url: 'login',
+        method: 'POST',
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useHelloQuery } = api;
+export const { useHelloQuery, useLoginMutation } = api;
